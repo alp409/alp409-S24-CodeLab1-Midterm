@@ -5,7 +5,7 @@ W-----------------W
 WWWWWWWWWWWW--WWWWW
 W-----------------W
 WWW--WWWWWWWWWWWWWW
-W-----------------W
+W-------------E---W
 WWWWWWWWWWWWW--WWWW
 W--------P------X-W
 RWWWWWWWWWWWWWWWWWB
