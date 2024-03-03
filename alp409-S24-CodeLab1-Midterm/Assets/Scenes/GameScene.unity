@@ -530,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlDisplay: {fileID: 534228734}
   timerDisplay: {fileID: 18769019}
-  maxTime: 5
+  maxTime: 30
 --- !u!1 &1516603703
 GameObject:
   m_ObjectHideFlags: 0
