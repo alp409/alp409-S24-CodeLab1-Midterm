@@ -76,21 +76,20 @@ public class LevelLoader : MonoBehaviour
 
                 switch (c)
                 {
+                    case 'P': // player
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
+                        break;
                     case 'W': // wall
-                        newObject = 
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Wall"));
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Wall"));
                         break;
                     case 'B': // blue square
-                        newObject =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/BlueSquare"));
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/BlueSquare"));
                         break;
                     case 'R': // red square
-                        newObject =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/RedSquare"));
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/RedSquare"));
                         break;
                     case 'Y': // blue square
-                        newObject =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/YellowSquare"));
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/YellowSquare"));
                         break;
                     default:
                         break;

@@ -7,5 +7,5 @@ W---B-W
 W-----W
 W---Y-W
 W-----W
-W-----W
+W--P--W
 WWWWWWW
