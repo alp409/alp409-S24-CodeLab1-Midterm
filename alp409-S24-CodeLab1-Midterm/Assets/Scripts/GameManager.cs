@@ -1,11 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    public TextMeshProUGUI lvlDisplay;
+
+    public TextMeshProUGUI timerDisplay;
+    // TODO: Add textmeshproUGUI to show timer and level number, maybe health too?
 
     private void Awake()
     {
@@ -32,6 +38,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        lvlDisplay.text = "Level: X";
+        timerDisplay.text = "Time: boop";
     }
 }
