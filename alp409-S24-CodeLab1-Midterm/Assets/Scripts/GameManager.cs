@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -53,6 +54,13 @@ public class GameManager : MonoBehaviour
         }
 
         timer += Time.deltaTime;
+
+        if (timer >= maxTime && isInGame)
+        {
+            isInGame = false;
+            Destroy(gameObject);
+            SceneManager.LoadScene("EndScene");
+        }
 
     }
 }
