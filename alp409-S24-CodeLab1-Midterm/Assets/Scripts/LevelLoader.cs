@@ -70,7 +70,7 @@ public class LevelLoader : MonoBehaviour
                 //get the first character
                 char c = characters[xLevelPos];
 
-                Debug.Log(c);
+                // Debug.Log(c);
 
                 GameObject newObject = null;
 
