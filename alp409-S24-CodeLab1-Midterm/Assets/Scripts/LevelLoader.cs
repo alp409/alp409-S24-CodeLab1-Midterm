@@ -56,7 +56,7 @@ public class LevelLoader : MonoBehaviour
         for (int yLevelPos = 0; yLevelPos < lines.Length; yLevelPos++)
         {
 
-            Debug.Log(lines[yLevelPos]);
+            //Debug.Log(lines[yLevelPos]);
 
             //Get a single line
             string line = lines[yLevelPos].ToUpper();
