@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PrizeScript : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         LevelLoader.instance.CurrentLevel++;
+        Debug.Log("trigger");
     }
 
     // Start is called before the first frame update
