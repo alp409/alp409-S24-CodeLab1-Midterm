@@ -8,7 +8,7 @@ public class PrizeScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         LevelLoader.instance.CurrentLevel++;
-        Debug.Log("trigger");
+        // Debug.Log("prize trigger");
     }
 
     // Start is called before the first frame update
