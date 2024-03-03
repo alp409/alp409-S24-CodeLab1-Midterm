@@ -1,5 +1,5 @@
 BWWWWWWWWWWWWWWWWWR
-W---------------Y-W
+W---------------X-W
 W---WWWWWWWWWWWWWWW
 W-----------------W
 WWWWWWWWWWWW--WWWWW
@@ -7,5 +7,5 @@ W-----------------W
 WWW--WWWWWWWWWWWWWW
 W-----------------W
 WWWWWWWWWWWWW--WWWW
-W--------P--------W
+W--------P------X-W
 RWWWWWWWWWWWWWWWWWB

@@ -82,12 +82,15 @@ public class LevelLoader : MonoBehaviour
                     case 'W': // wall
                         newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Wall"));
                         break;
-                    case 'H': // horizontal wall
+                    case 'X': // prize
+                        newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Prize"));
+                        break;
+                    /*case 'H': // horizontal wall
                         newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Horizontal"));
                         break;
                     case 'V': // vertical wall
                         newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Vertical"));
-                        break;
+                        break;*/
                     case 'B': // blue square
                         newObject = Instantiate(Resources.Load<GameObject>("Prefabs/BlueSquare"));
                         break;
