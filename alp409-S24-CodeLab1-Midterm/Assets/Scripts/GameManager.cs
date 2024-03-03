@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerDisplay;
     // TODO: Add textmeshproUGUI to show timer and level number, maybe health too?
 
+    private float timer = 0;
+    public int maxTime = 60;
+    private bool isInGame = true; // TODO: use this later for start and end screen
+    
     private void Awake()
     {
         if (instance == null)
@@ -38,7 +42,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lvlDisplay.text = "Level: X";
-        timerDisplay.text = "Time: boop";
+        if (isInGame)
+        {
+            lvlDisplay.text = "Level: X";
+            timerDisplay.text = "Time:" + (maxTime - (int)timer);            
+        }
+        else
+        {
+            // TODO: end screen 
+        }
+
+        timer += Time.deltaTime;
+
     }
 }
