@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     int currentLevel = 0;
     public GameObject level;
+    public string displayLevel;  //////// TODO: why doesn't this work????
 
     public int CurrentLevel
     {
@@ -20,6 +21,7 @@ public class LevelLoader : MonoBehaviour
             currentLevel = value;
             LoadLevel();
             Debug.Log("Level: " + currentLevel);
+            displayLevel = currentLevel + ""; ////// TODO: why doesn't this work??
         }
     }
 

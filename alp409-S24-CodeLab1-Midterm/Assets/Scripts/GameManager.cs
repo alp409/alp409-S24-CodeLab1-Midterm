@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() 
     {
-        // TODO: once this is fixed, add it to UGUI to show level
-        // Debug.Log("level: " + LevelLoader.instance.CurrentLevel);
+        
     }
 
     // Update is called once per frame
@@ -43,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if (isInGame)
         {
-            lvlDisplay.text = "Level: ";
+            lvlDisplay.text = "Level: "; /////// TODO: why???? + displayLevel;
             timerDisplay.text = "Time:" + (maxTime - (int)timer);            
         }
         else
