@@ -5,18 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class StartScreenManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    // In start and end scene, press space to go to game scene
     void Update()
     {
         if (Input.GetKey(KeyCode.Space)) 
         {
             SceneManager.LoadScene("GameScene");
         }
+        
+        // TODO: add initials entry field
+        // TODO: add score? number to end scene with initials
     }
 }

@@ -19,12 +19,11 @@ public class LevelLoader : MonoBehaviour
         {
             currentLevel = value;
             LoadLevel();
-            Debug.Log("Level: " + level);
+            Debug.Log("Level: " + currentLevel);
         }
     }
 
     string FILE_PATH;
-
     public static LevelLoader instance;
     
     // Start is called before the first frame update
@@ -53,9 +52,10 @@ public class LevelLoader : MonoBehaviour
         string[] lines = File.ReadAllLines(
             FILE_PATH.Replace("Num", currentLevel + ""));
 
+        // for loop checking the lines in the txt file and assigning y level position
+        // will take each position and turn it into an array of chars
         for (int yLevelPos = 0; yLevelPos < lines.Length; yLevelPos++)
         {
-
             //Debug.Log(lines[yLevelPos]);
 
             //Get a single line
@@ -64,16 +64,22 @@ public class LevelLoader : MonoBehaviour
             //Turn line into a char array
             char[] characters = line.ToCharArray();
 
+            // for loop checking each individual char and assigning the x level position
+            // will run the chars through a switch statement to check against defined chars
             for (int xLevelPos = 0; xLevelPos < characters.Length; xLevelPos++)
             {
 
-                //get the first character
+                //get the characters in the array
                 char c = characters[xLevelPos];
 
                 // Debug.Log(c);
 
                 GameObject newObject = null;
 
+                // switch statement for building levels with txt files
+                // checks if the char is one of the predefined cases
+                // drops a prefab in the correct location (defined by x pos and y pos)
+                // TODO: remove unnecessary cases from old idea
                 switch (c)
                 {
                     case 'P': // player
@@ -106,11 +112,11 @@ public class LevelLoader : MonoBehaviour
                     default:
                         break;
                 }
-
+                
                 if (newObject != null)
                 {
                     newObject.transform.parent = level.transform;
-                    //Give it a position based on where it was in the ASCII file
+                    // gives it a position based on where it was in the ASCII file x pos and y pos
                     newObject.transform.position = new Vector2(xLevelPos, -yLevelPos);
                 }
             }
