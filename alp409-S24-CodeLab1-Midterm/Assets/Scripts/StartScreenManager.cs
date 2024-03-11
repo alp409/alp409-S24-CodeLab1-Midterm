@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartScreenManager : MonoBehaviour
 {
+    public TextMeshProUGUI output;
+    public TMP_InputField playerName;
+
+    public void enterName()
+    {
+        output.text = "Hello " + playerName.text + "\n Press Enter to Start";
+    }
+
     //public string nameInput;
     // In start and end scene, press space to go to game scene
     void Update()
