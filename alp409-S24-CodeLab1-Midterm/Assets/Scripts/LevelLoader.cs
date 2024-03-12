@@ -5,7 +5,7 @@ using System.IO;
 
 public class LevelLoader : MonoBehaviour
 {
-    int currentLevel = 0;
+    public int currentLevel = 1;
     public GameObject level;
 
     public int CurrentLevel

@@ -170,8 +170,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294913792
-  m_fontColor: {r: 0, g: 0.1844647, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -396,8 +396,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -531,6 +531,7 @@ MonoBehaviour:
   lvlDisplay: {fileID: 534228734}
   timerDisplay: {fileID: 18769019}
   maxTime: 30
+  levelLoader: {fileID: 1516603705}
 --- !u!1 &1516603703
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b8e4a8984ff04d944e5e82ae268d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
   level: {fileID: 0}
 --- !u!1 &1566203796
 GameObject:
