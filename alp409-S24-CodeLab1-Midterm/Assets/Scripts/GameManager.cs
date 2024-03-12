@@ -12,12 +12,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI lvlDisplay;
     public TextMeshProUGUI timerDisplay;
 
+    // remember: inInGame starts true because the GameManager isn't in the start scene
     private float timer = 0;
     public int maxTime = 60;
     private bool isInGame = true;
 
     public LevelLoader levelLoader; 
     
+    // use GameManager as singleton for when isInGame = true 
+    // GameManager will be destroyed when isInGame = false which happens when the timer runs out
     private void Awake()
     {
         if (instance == null)
@@ -42,11 +45,13 @@ public class GameManager : MonoBehaviour
     {
         if (isInGame)
         {
-            lvlDisplay.text = "Level: " + levelLoader.currentLevel; // TODO : fix it
+            // setting text for TMP
+            lvlDisplay.text = "Level: " + levelLoader.currentLevel; 
             timerDisplay.text = "Time:" + (maxTime - (int)timer);            
         }
         else
         {
+            // isInGame ends timer and destroys GameManger singleton
             isInGame = false;
             Destroy(gameObject);
             SceneManager.LoadScene("EndScene");

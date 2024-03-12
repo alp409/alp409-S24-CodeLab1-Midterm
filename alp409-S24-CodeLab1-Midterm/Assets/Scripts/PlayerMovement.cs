@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // WASD controller
         if (Input.GetKey(KeyCode.W))
         {
             rb.AddForce(Vector3.up * forceAmount);

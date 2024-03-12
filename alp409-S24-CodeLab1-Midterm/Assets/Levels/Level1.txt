@@ -1,11 +1,11 @@
 ﻿BWWWWWWWWWWWWWWWWWR
 W-----------------W
-W----E---------X--W
-W--------E--------W
+W--------------X--W
+W-----------------W
 W---------WWWWWWWWW
 W----E------------W
 W-----------------W
-WWWWWWWWWW----E--WW
-W----E------------W
+WWWWWWWWWW--------W
+W-----------------W
 W-P---------------W
 RWWWWWWWWWWWWWWWWWB
