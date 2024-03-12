@@ -4,23 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.Windows;
-using Input = UnityEngine.Input;
+//using UnityEngine.Windows;
+using Input =  UnityEngine.Input;
+using System.IO;
 
 public class StartScreenManager : MonoBehaviour
 {
     public TextMeshProUGUI output;
     public TMP_InputField playerName;
-    public TextMeshProUGUI gameOverText;
+    //public TextMeshProUGUI gameOverText;
 
     private const string FILE_DIR = "/Data/";
     private const string DATA_FILE = "playerName.txt";
     private string FILE_PATH;
 
     private string savedPlayerName = "";
-    
-    // add script here to get player name from input field and save a txt file to data folder
-    // reference that txt file in endGameName below
     
     public void enterName()
     {
@@ -32,24 +30,48 @@ public class StartScreenManager : MonoBehaviour
     {
         FILE_PATH = Application.dataPath + FILE_DIR + DATA_FILE;
 
-        //File.WriteAllText(FILE_PATH, name);
+        File.WriteAllText(FILE_PATH, name);
+        Debug.Log("Name saved: " + name);
     }
 
-    public void endGameName()  // TODO: fix it
+    public void endGameName() // TODO: fix it
     {
-        output.text = "Good Game " + playerName.text;
+        string savedName = ReadPlayerName();
+
+        // enter player name into Good Game text here
+        if (output != null)
+        {
+            output.text = "Game Over " + savedName + "\n Press Enter to Play Again";
+        }
     }
-    
+
+
+    private string ReadPlayerName()
+    {
+        FILE_PATH = Application.dataPath + FILE_DIR + DATA_FILE;
+
+        if (File.Exists(FILE_PATH))
+        {
+            string playerName = File.ReadAllText(FILE_PATH);
+            return playerName;
+        }
+        else
+        {
+            return "";
+        }
+    }
+
     // In start and end scene, press enter to go to game scene
-    private void Start()
-    {
-    }
-
     void Update()
     {
         if (Input.GetKey(KeyCode.Return)) 
         {
             SceneManager.LoadScene("GameScene");
+        }
+
+        if (SceneManager.GetActiveScene().name == "EndScene")
+        {
+            endGameName();
         }
     }
 }
